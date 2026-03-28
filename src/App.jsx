@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { HashRouter, Routes, Route, Navigate } from "react-router-dom";
 
 /* PUBLIC PAGES  */
 import Dashboard from "./pages/Dashboard";
@@ -41,7 +41,7 @@ function ProtectedRoute({ role, children }) {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
 
         {/* ===== ROOT ===== */}
@@ -95,6 +95,6 @@ export default function App() {
         <Route path="*" element={<Navigate to="/" />} />
 
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
